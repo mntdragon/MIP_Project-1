@@ -1,6 +1,6 @@
 angular.module('app.services', [])
 
-.factory('BlankFactory', [function(){
+.factory('BlankFactory', [function($http, $q, $localstorage, SERVER){
 
 }])
 

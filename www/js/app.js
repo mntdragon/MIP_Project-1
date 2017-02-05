@@ -12,15 +12,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 
   $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
   
-  $stateProvider.state('app.search', {
-      url: '/search',
-      views: {
-        'mainContent': {
-          templateUrl: 'templates/search.html',
-          controller: 'searchCtrl'
-        }
-      }
-    });
+
     
 })
 
