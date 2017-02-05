@@ -36,6 +36,16 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
+  .state('tabsController.comments' , {
+    url: '/comments/:id',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/comments.html',
+        controller: 'commentsCtrl'
+      }
+    }
+  })
+
   /* 
     The IonicUIRouter.js UI-Router Modification is being used for this route.
     To navigate to this route, do NOT use a URL. Instead use one of the following:
@@ -49,19 +59,40 @@ angular.module('app.routes', ['ionicUIRouter'])
       /page1/tab5/profile
       /page1/tab6/profile
   */
+   .state('tabsController.searchprofile', {
+    url: '/searchprofile/:id',
+    views: {
+      'tab6': {
+        templateUrl: 'templates/searchprofile.html',
+        controller: 'profileController'
+    }
+    }
+
+  })
+  .state('tabsController.profile', {
+    url: '/profile/',
+    views: {
+      'tab5': {
+        templateUrl: 'templates/profile.html',
+        controller: 'profileCtrl'
+    }
+    }
+
+  })
+  /*
   .state('tabsController.profile', {
     url: '/profile',
     views: {
       'tab5': {
         templateUrl: 'templates/profile.html',
         controller: 'profileCtrl'
-      },
+    }/*,
       'tab6': {
         templateUrl: 'templates/profile.html',
         controller: 'profileCtrl'
       }
     }
-  })
+  })*/
 
   .state('tabsController.search', {
     url: '/search',
