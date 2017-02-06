@@ -4,15 +4,17 @@
       <ion-item class="item-avatar" id="home-list-item3">
       <img ng-src="{{ post.avatar }}">
         <h2>{{post.name}}</h2>
-         <img ng-src="{{post.img}}" width="396" height="216">
-        </ion-item>
-       <button ng-click="likeClick()" ng-init="likeCount = x.like" id="home-button1" class="button button-light  icon ion-ios-heart-outline"> {{ likeCount }}</button>
-        <button id="home-button2" class="button button-light  icon ion-android-chat" ui-sref="tabsController.comments({id: {{post.id}}})" ></button>
-        <ion-input placeholder="comment here" focus></ion-input>
-        <div class="list card" id="home-card24" >
-        <!--<ion-item class="item-avatar" id="home-list-item11" >
-          <h2> <img ng-src="{{post.cmimg}}" width="50" height="50">   {{post.comment}}</h2>
-          </ion-item>-->
+
+        </ion-item><br>
+      <img ng-src="{{ post.img }}" width="426" height="240" style="float:left; max-width: 100%"><br>
+      
+       <button ng-click="likeClick()" ng-init="liked='Like';likeCount = post.like" id="home-button1" ng-class="class">  {{ likeCount }}</button>
+        <button id="home-button2" class="button button-light  icon ion-android-chat"></button>
+          
+        <div class="list card" id="home-card24">
+        <ion-item class="item-avatar" id="home-list-item11" >
+          <h2>Comment line here</h2>
+          </ion-item>
           </div>
       </div>
       </ion-content>

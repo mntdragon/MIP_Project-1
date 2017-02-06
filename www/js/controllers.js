@@ -37,20 +37,7 @@ function ($scope, $stateParams) {
 
 	// $scope.user = user;
 
-	// var hasLiked = false;
-
-	// $scope.likeClick = function() {
-	// 	if (!hasLiked) {
-	// 		hasLiked = true;
-			
-	// 		$scope.likeCount += 1;
-	// 		console.log(user[0].like);
-	// 	} else {
-	// 		hasLiked = false;
-			
-	// 		$scope.likeCount -= 1;
-	// 	}
-	// };
+	 
 var userList=[
 {"id": 1,
  "name": "Pham Huong",
@@ -66,10 +53,8 @@ var userList=[
  "avatar": "img/img4.jpg"},
  {"id": 5,
  "name": "Lasse Khoai",
- "avatar": "img/img5.jpg"},
- {"id": 6,
- "name": "Thang Minh",
- "avatar": "img/img1.jpg"}
+ "avatar": "img/img5.jpg"}
+ 
 ];
 $scope.posts = userList;
 var imgList =[
@@ -81,13 +66,13 @@ var imgList =[
 },
 {
 	"id": 2,
-	"uid":3,
+	"uid":2,
 	"like": 1,
 	"img": "img/img2.jpg"
 },
 {
 	"id": 3,
-	"uid":2,
+	"uid":3,
 	"like": 7,
 	"img": "img/img3.jpg"
 },
@@ -103,12 +88,7 @@ var imgList =[
 	"like": 1,
 	"img": "img/img5.jpg"
 },
-{
-	"id": 6,
-	"uid":6,
-	"like": 3,
-	"img": "img/img4.jpg"
-}
+
 ];
 $scope.imgList = imgList;
 
@@ -117,12 +97,31 @@ for(var i = 0; i < imgList.length; i++){
 		if(imgList[i].uid == userList[k].id){
 			$scope.posts[k].img = imgList[i].img;
 			$scope.posts[k].id = imgList[i].id;
+			$scope.posts[k].like = imgList[i].like;
 		}
 		else{
 			
 		}
 	}
 }
+
+
+var hasLiked = false;
+	 $scope.class = "button button-light  icon ion-ios-heart-outline";
+	 console.log(imgList[0].like);
+	 $scope.likeClick = function() {
+	 	if (!hasLiked) {
+	 		hasLiked = true;
+			
+	 		$scope.likeCount += 1;
+	 		$scope.class = "button button-light icon ion-ios-heart";
+	 	} else {
+	 		hasLiked = false;
+			
+	 		$scope.likeCount -= 1;
+	 		$scope.class = "button button-light  icon ion-ios-heart-outline";
+	 	}
+	 }
 // var commentList=[
 // 	{
 // 		"cmtid": 1,
@@ -185,13 +184,13 @@ var imgList =[
 },
 {
 	"id": 2,
-	"uid":3,
+	"uid":2,
 	"like": 1,
 	"img": "img/img2.jpg"
 },
 {
 	"id": 3,
-	"uid":2,
+	"uid":3,
 	"like": 7,
 	"img": "img/img3.jpg"
 },
