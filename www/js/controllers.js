@@ -37,7 +37,7 @@ function ($scope, $stateParams) {
 
 	// $scope.user = user;
 
-<<<<<<< HEAD
+
 	 
 var userList=[
 {"id": 1,
@@ -93,33 +93,7 @@ var imgList =[
 ];
 $scope.imgList = imgList;
 
-for(var i = 0; i < imgList.length; i++){
-	for(var k = 0; k < userList.length; k++){
-		if(imgList[i].uid == userList[k].id){
-			$scope.posts[k].img = imgList[i].img;
-			$scope.posts[k].id = imgList[i].id;
-			$scope.posts[k].like = imgList[i].like;
-		}
-		else{
-			
-		}
-	}
-}
-=======
-	// var hasLiked = false;
 
-	// $scope.likeClick = function() {
-	// 	if (!hasLiked) {
-	// 		hasLiked = true;
-			
-	// 		$scope.likeCount += 1;
-	// 		console.log(user[0].like);
-	// 	} else {
-	// 		hasLiked = false;
-			
-	// 		$scope.likeCount -= 1;
-	// 	}
-	// };
 var userList=[
 {"id": 1,
  "name": "Pham Huong",
@@ -150,13 +124,13 @@ var imgList =[
 },
 {
 	"id": 2,
-	"uid":3,
+	"uid":2,
 	"like": 1,
 	"img": "img/img2.jpg"
 },
 {
 	"id": 3,
-	"uid":2,
+	"uid":3,
 	"like": 7,
 	"img": "img/img3.jpg"
 },
@@ -180,13 +154,14 @@ var imgList =[
 }
 ];
 $scope.imgList = imgList;
->>>>>>> master
+
 
 for(var i = 0; i < imgList.length; i++){
 	for(var k = 0; k < userList.length; k++){
 		if(imgList[i].uid == userList[k].id){
 			$scope.posts[k].img = imgList[i].img;
 			$scope.posts[k].id = imgList[i].id;
+			$scope.posts[k].like = imgList[i].like;
 		}
 		else{
 			
@@ -299,21 +274,13 @@ var imgList =[
 },
 {
 	"id": 2,
-<<<<<<< HEAD
 	"uid":2,
-=======
-	"uid":3,
->>>>>>> master
 	"like": 1,
 	"img": "img/img2.jpg"
 },
 {
 	"id": 3,
-<<<<<<< HEAD
 	"uid":3,
-=======
-	"uid":2,
->>>>>>> master
 	"like": 7,
 	"img": "img/img3.jpg"
 },
