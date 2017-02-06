@@ -37,6 +37,7 @@ function ($scope, $stateParams) {
 
 	// $scope.user = user;
 
+<<<<<<< HEAD
 	 
 var userList=[
 {"id": 1,
@@ -104,7 +105,121 @@ for(var i = 0; i < imgList.length; i++){
 		}
 	}
 }
+=======
+	// var hasLiked = false;
 
+	// $scope.likeClick = function() {
+	// 	if (!hasLiked) {
+	// 		hasLiked = true;
+			
+	// 		$scope.likeCount += 1;
+	// 		console.log(user[0].like);
+	// 	} else {
+	// 		hasLiked = false;
+			
+	// 		$scope.likeCount -= 1;
+	// 	}
+	// };
+var userList=[
+{"id": 1,
+ "name": "Pham Huong",
+ "avatar": "img/img1.jpg"},
+ {"id": 2,
+ "name": "Boe Pham",
+ "avatar": "img/img2.jpg"},
+ {"id": 3,
+ "name": "Smith Wesley",
+ "avatar": "img/img3.jpg"},
+ {"id": 4,
+ "name": "Jane Ionic",
+ "avatar": "img/img4.jpg"},
+ {"id": 5,
+ "name": "Lasse Khoai",
+ "avatar": "img/img5.jpg"},
+ {"id": 6,
+ "name": "Thang Minh",
+ "avatar": "img/img1.jpg"}
+];
+$scope.posts = userList;
+var imgList =[
+{
+	"id": 1,
+	"uid":1,
+	"like": 2,
+	"img": "img/img1.jpg"
+},
+{
+	"id": 2,
+	"uid":3,
+	"like": 1,
+	"img": "img/img2.jpg"
+},
+{
+	"id": 3,
+	"uid":2,
+	"like": 7,
+	"img": "img/img3.jpg"
+},
+{
+	"id": 4,
+	"uid":4,
+	"like": 5,
+	"img": "img/img5.jpg"
+},
+{
+	"id": 5,
+	"uid":5,
+	"like": 1,
+	"img": "img/img5.jpg"
+},
+{
+	"id": 6,
+	"uid":6,
+	"like": 3,
+	"img": "img/img4.jpg"
+}
+];
+$scope.imgList = imgList;
+>>>>>>> master
+
+for(var i = 0; i < imgList.length; i++){
+	for(var k = 0; k < userList.length; k++){
+		if(imgList[i].uid == userList[k].id){
+			$scope.posts[k].img = imgList[i].img;
+			$scope.posts[k].id = imgList[i].id;
+		}
+		else{
+			
+		}
+	}
+}
+// var commentList=[
+// 	{
+// 		"cmtid": 1,
+// 		"imgid": 1,
+// 		"uid": 5,
+// 		"content": "I love your picture"
+// 	},
+// 	{
+// 		"cmtid": 2,
+// 		"imgid": 2,
+// 		"uid": 4,
+// 		"content": "have to log in to give a heart to ur picture. Gorgeous"
+// 	},
+// 	{
+// 		"cmtid": 3,
+// 		"imgid": 3,
+// 		"uid": 6,
+// 		"content": "Wonderful"
+// 	},
+// 	{
+// 		"cmtid": 4,
+// 		"imgid": 1,
+// 		"uid": 4,
+// 		"content": "tetetetet"
+// 	}
+	
+// ];
 
 var hasLiked = false;
 	 $scope.class = "button button-light  icon ion-ios-heart-outline";
@@ -184,13 +299,21 @@ var imgList =[
 },
 {
 	"id": 2,
+<<<<<<< HEAD
 	"uid":2,
+=======
+	"uid":3,
+>>>>>>> master
 	"like": 1,
 	"img": "img/img2.jpg"
 },
 {
 	"id": 3,
+<<<<<<< HEAD
 	"uid":3,
+=======
+	"uid":2,
+>>>>>>> master
 	"like": 7,
 	"img": "img/img3.jpg"
 },
