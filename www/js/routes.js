@@ -21,7 +21,7 @@ angular.module('app.routes', ['ionicUIRouter'])
   })
 
   .state('tabsController', {
-    url: '/page1',
+    url: '',
     templateUrl: 'templates/tabsController.html',
     abstract:true
   })
